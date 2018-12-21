@@ -20,9 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Abstract Factory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Animal World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -30,6 +27,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Cornivor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Continent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

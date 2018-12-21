@@ -3,29 +3,32 @@
 #include<string>
 
 #include"Herbivor.h"
+
 class Cornivor
 {
 public:
+	Cornivor() {};
 	void Eat(Herbivor* item)
 	{
-		if (power > item->GetWeidht())
+		if (Power > item->GetWeight())
 		{
-			power += 10;
+			Power += 10;
 			item->Damage();
 		}
 		else
 		{
-			power -= 10;
+			Power -= 10;
 		}
 	}
-	void Show()
+	void Show() const
 	{
-		std::cout << name;
-		std::cout << " Power:" << power;
+		std::cout << name << " Power:" << Power;
+
 	}
+	virtual ~Cornivor() = 0 {};
 protected:
-	int power = 50;
-	std::string name = "Lion";
+	int Power;
+	std::string name;
 };
 
 class Lion :public Cornivor
@@ -33,12 +36,27 @@ class Lion :public Cornivor
 public:
 	Lion()
 	{
+		name = "Lion";
+		Power = 50;
 	}
-	Lion(std::string name, int power)
+};
+
+class Wolf :public Cornivor
+{
+public:
+	Wolf()
 	{
-		this->name = name;
-		this->power = power;
+		name = "Wolf";
+		Power = 30;
 	}
-private:
-	std::string name;
+};
+
+class Tiger :public Cornivor
+{
+public:
+	Tiger()
+	{
+		name = "Tiger";
+		Power = 90;
+	}
 };
